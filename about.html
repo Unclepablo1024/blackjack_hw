@@ -6,11 +6,11 @@
   <title>About Blackjack</title>
 
   <!-- Reset and common styles -->
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
 
   <!-- Page-specific styles -->
-  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
   <header>
@@ -29,16 +29,30 @@
       <h1>The Ultimate Blackjack Experience Awaits!</h1>
     </section>
 
-    <!-- Why Us Section -->
-    <section id="whyUs">
-      <p>Why are we the best? Our Blackjack app delivers unmatched excitement, strategy, and real-time gameplay!</p>
-    </section>
+    <!-- Grid Layout Content -->
+    <section id="aboutGrid">
+      <div id="whyUs">
+        <h2>Why Us?</h2>
+        <p>Why are we the best? Our Blackjack app delivers unmatched excitement, strategy, and real-time gameplay!</p>
+      </div>
 
-    <!-- Call To Action Section -->
-    <section id="callToAction">
-      <p>Play now and win real Money while enjoying a smooth and thrilling interface.</p>
-      <button>Start Playing</button>
+      <div id="callToAction">
+        <p>Play now and win real Money while enjoying a smooth and thrilling interface.</p>
+        <button>Start Playing</button>
+      </div>
+
+      <div class="disappearing">
+        <p>This section is visible only on screens wider than 900px.</p>
+      </div>
+
+      <div class="mobileFeature">
+        <p>This section is visible only on mobile and smaller tablets.</p>
+      </div>
     </section>
   </main>
+
+  <footer>
+    <p>© 2025 Blackjack App</p>
+  </footer>
 </body>
 </html>

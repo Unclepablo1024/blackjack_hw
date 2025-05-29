@@ -1,0 +1,94 @@
+/* Reset padding/margins on all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body padding to account for fixed header/footer */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding-top: 60px;   /* height of header */
+  padding-bottom: 60px; /* height of footer */
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header and Footer fixed position */
+header, footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #222;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
+
+/* Position header at top */
+header {
+  top: 0;
+}
+
+/* Position footer at bottom */
+footer {
+  bottom: 0;
+  justify-content: center;
+  font-size: 0.9em;
+}
+
+/* Navigation menu inside header */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive utility classes */
+.disappearing {
+  display: block;
+}
+
+.mobileFeature {
+  display: none;
+}
+
+/* Responsive breakpoint: between 500px and 900px */
+@media screen and (max-width: 900px) {
+  .disappearing {
+    display: none;
+  }
+
+  .mobileFeature {
+    display: block;
+  }
+}
+
+/* Simple button style */
+button {
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
