@@ -1,0 +1,99 @@
+/* Page container */
+body {
+  padding: 60px 1em 80px; /* top & bottom space for fixed header/footer */
+  background-color: #f9f9f9;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Centered form container */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Form label and input styling */
+label {
+  display: block;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.6em;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 0.3em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Checkbox group styling */
+input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+/* Submit button styling */
+button {
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1em;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #444;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+header {
+  top: 0;
+}
+
+header, footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #222;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
