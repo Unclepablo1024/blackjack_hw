@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blackjack Game</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/blackjack.css" />
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="blackjack.html">Play</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Blackjack Table</h1>
+
+    <!-- Betting Section -->
+    <section id="betting" class="hidden">
+      <p>Bankroll: <span id="bankrollDisplay">$2022</span></p>
+
+      <label for="users-wager">Your Wager:</label>
+      <input type="number" id="users-wager" min="1" step="1" />
+
+      <button onclick="makeWager()">Bet</button>
+    </section>
+
+    <!-- Player Actions Section -->
+    <section id="playersActions" class="hidden">
+      <p>Your move:</p>
+      <button>Hit</button>
+      <button>Stand</button>
+    </section>
+
+    <button onclick="timeToBet()" style="margin-top: 2em;">Start Betting</button>
+  </main>
+
+  <footer>
+    <p id="copyright">© 2025 Blackjack App</p>
+  </footer>
+
+  <script>
+    // Global bankroll variable
+    let bankroll = 2022;
+
+    // Get bankroll
+    function getBankroll() {
+      return bankroll;
+    }
+
+    // Set bankroll
+    function setBankroll(newBalance) {
+      bankroll = parseInt(newBalance, 10);
+      document.getElementById("bankrollDisplay").textContent = `$${bankroll}`;
+    }
+
+    // Show betting interface
+    function timeToBet() {
+      document.getElementById("playersActions").classList.add("hidden");
+      document.getElementById("betting").classList.remove("hidden");
+      document.getElementById("bankrollDisplay").textContent = `$${getBankroll()}`;
+    }
+
+    // Process the user's wager
+    function makeWager() {
+      const wager = parseInt(document.getElementById("users-wager").value, 10);
+
+      console.log(`User wagered: $${wager}`);
+
+      // Optionally, deduct wager from bankroll (validate first)
+      // setBankroll(getBankroll() - wager);
+
+      timeToPlay();
+    }
+
+    // Begin gameplay
+    function timeToPlay() {
+      document.getElementById("betting").classList.add("hidden");
+      document.getElementById("playersActions").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
