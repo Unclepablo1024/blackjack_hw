@@ -1,0 +1,47 @@
+/* Hero Section */
+#hero {
+  width: 100%;
+  height: 30vh;
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main layout container */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Why Us Section */
+#whyUs {
+  width: 40%;
+  box-sizing: border-box;
+  padding: 1em;
+  background-color: #f4f4f4;
+}
+
+/* Call to Action Section */
+#callToAction {
+  width: 60%;
+  box-sizing: border-box;
+  padding: 1em;
+  background-color: #e0e0e0;
+}
+
+/* Call to Action button styling */
+#callToAction button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 800px) {
+  #whyUs, #callToAction {
+    width: 100%;
+  }
+}
