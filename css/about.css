@@ -80,3 +80,9 @@
     display: block;
   }
 }
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+

@@ -6,13 +6,26 @@
 }
 
 /* Body padding to account for fixed header/footer */
+/* Base font for body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   line-height: 1.6;
-  padding-top: 60px;   /* height of header */
-  padding-bottom: 60px; /* height of footer */
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #f9f9f9;
   color: #333;
+}
+
+/* Headings use Montserrat */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Specific size and margin for h1 */
+h1 {
+  font-size: 40px;
+  margin: 20px 0;
 }
 
 /* Header and Footer fixed position */
@@ -91,4 +104,9 @@ button {
 
 button:hover {
   background-color: #444;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1em;
 }
