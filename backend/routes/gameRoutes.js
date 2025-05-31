@@ -1,11 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { getGame, postGame } = require("../controllers/gameController");
+const { startGame, hit, stand, getAllGames } = require("../controllers/gameController");
 
-// GET /api/games
-router.get("/", getGame);
-
-// POST /api/games
-router.post("/", postGame);
+router.get("/", getAllGames);           // GET all games
+router.post("/start", startGame);       // Start new game
+router.put("/:id/hit", hit);            // Hit
+router.put("/:id/stand", stand);        // Stand
 
 module.exports = router;
